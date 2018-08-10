@@ -1,6 +1,7 @@
 # ten-pin-bowling-kata
 
-How Ten Pin Bowling scoring works
+How Ten Pin Bowling Scoring Works
+---------------------------------
 Ten pin bowling is a game that consists of ten "frames". In each frame, each player has two chances to knock down ten pins. The score for the frame is the total number of pins knocked down, plus a bonus for "strikes" or "spares.
 
 A "strike" is when the player has knocked down all ten pins on the first try for that frame. When this happens, the bonus for the frame is the value of the next two balls rolled.
@@ -20,6 +21,7 @@ Example: In frame 10, the player knocks down 10 pins on the first go. The player
 The total score for the game is the total score for each frame.
 
 Challenge objectives
+``` c#
 public interface IBowlingGame 
 {
      // called each time a player rolls a ball
@@ -28,12 +30,13 @@ public interface IBowlingGame
      // called at the end of the game to retrieve total score
      int FinalScore();
 }
+```
 
 The task is to implement IBowlingGame.
 
 Example game:
 
-Frame # | Rolls | Cumalative Score
+Frame # | Rolls | Cumulative Score
 --------|-------|------
 1       | 9, 1  | 10
 2       | 0, 10 | 30
